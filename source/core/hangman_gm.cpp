@@ -334,16 +334,12 @@ char GameController::read_user_guess() {
 GameController::menu_e GameController::read_menu_option() {
   int option;
   std::cin >> option;
-  std::cin.clear();
-  std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
   switch (option) {
     case 1:return menu_e::PLAY;
     case 2:return menu_e::RULES;
     case 3:return menu_e::SCORE;
     case 4:return menu_e::EXIT;
-    default: std::cout << "Please enter a valid option" << std::endl;
-    std::cin.clear();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
+    default: std::cout << "Please enter a valid option" << std::endl; 
     return menu_e::UNDEFINED;
   }
 }
@@ -371,9 +367,6 @@ char GameController::read_difficulty_option() {
 std::set<std::string> GameController::read_category_option() {
     std::set<int> numbers;
     std::string line;
-
-    std::cin.ignore(); // Clear input buffer
-    std::cout<< "Enter your options number , divided by spaces, and hit 'Enter' (ex: '1' or '1 2')>";
 
     std::getline(std::cin, line);
 
@@ -604,7 +597,7 @@ void GameController::show_interaction_msg() const {
       std::cout<< "Enter your option number and hit 'Enter' >";
       break;
     case game_state_e::CATEGORY_OPTIONS:
-      std::cout<< "Are you ready for this challenge? Write anything and hit 'Enter':";
+    std::cout<< "Enter your options number , divided by spaces, and hit 'Enter' (ex: '1' or '1 2')>";
       break;
     case game_state_e::DIFFICULTY_OPTIONS:
       std::cout<< "Enter your option number and hit 'Enter' >";
