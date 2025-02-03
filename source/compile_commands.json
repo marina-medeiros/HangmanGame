@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source",
+  "command": "/usr/bin/c++  -I/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core  -Wall  -o CMakeFiles/hangman.dir/core/main.cpp.o -c /home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/main.cpp",
+  "file": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/main.cpp"
+},
+{
+  "directory": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source",
+  "command": "/usr/bin/c++  -I/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core  -Wall  -o CMakeFiles/hangman.dir/core/hangman_gm.cpp.o -c /home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/hangman_gm.cpp",
+  "file": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/hangman_gm.cpp"
+},
+{
+  "directory": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source",
+  "command": "/usr/bin/c++  -I/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core  -Wall  -o CMakeFiles/hangman.dir/core/hm_word.cpp.o -c /home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/hm_word.cpp",
+  "file": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/hm_word.cpp"
+},
+{
+  "directory": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source",
+  "command": "/usr/bin/c++  -I/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core  -Wall  -o CMakeFiles/hangman.dir/core/data_manager.cpp.o -c /home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/data_manager.cpp",
+  "file": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/data_manager.cpp"
+},
+{
+  "directory": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source",
+  "command": "/usr/bin/c++  -I/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core  -Wall  -o CMakeFiles/hangman.dir/core/player.cpp.o -c /home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/player.cpp",
+  "file": "/home/petcc-05/Documentos/LP1-Bianca/trabalho-06-hangman-farofa-e-vinagrete/source/core/player.cpp"
+}
+]

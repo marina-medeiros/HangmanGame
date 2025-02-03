@@ -1,0 +1,1 @@
+/usr/bin/c++  -Wall  CMakeFiles/hangman.dir/core/main.cpp.o CMakeFiles/hangman.dir/core/hangman_gm.cpp.o CMakeFiles/hangman.dir/core/hm_word.cpp.o CMakeFiles/hangman.dir/core/data_manager.cpp.o CMakeFiles/hangman.dir/core/player.cpp.o -o hangman 

@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/marina/Documents/portifolio/HangmanGame/source/build",
+  "command": "/usr/bin/c++    -Wall  -g3 -o CMakeFiles/hangman.dir/core/main.cpp.o -c /home/marina/Documents/portifolio/HangmanGame/source/core/main.cpp",
+  "file": "/home/marina/Documents/portifolio/HangmanGame/source/core/main.cpp"
+},
+{
+  "directory": "/home/marina/Documents/portifolio/HangmanGame/source/build",
+  "command": "/usr/bin/c++    -Wall  -g3 -o CMakeFiles/hangman.dir/core/hangman_gm.cpp.o -c /home/marina/Documents/portifolio/HangmanGame/source/core/hangman_gm.cpp",
+  "file": "/home/marina/Documents/portifolio/HangmanGame/source/core/hangman_gm.cpp"
+},
+{
+  "directory": "/home/marina/Documents/portifolio/HangmanGame/source/build",
+  "command": "/usr/bin/c++    -Wall  -g3 -o CMakeFiles/hangman.dir/core/hm_word.cpp.o -c /home/marina/Documents/portifolio/HangmanGame/source/core/hm_word.cpp",
+  "file": "/home/marina/Documents/portifolio/HangmanGame/source/core/hm_word.cpp"
+},
+{
+  "directory": "/home/marina/Documents/portifolio/HangmanGame/source/build",
+  "command": "/usr/bin/c++    -Wall  -g3 -o CMakeFiles/hangman.dir/core/data_manager.cpp.o -c /home/marina/Documents/portifolio/HangmanGame/source/core/data_manager.cpp",
+  "file": "/home/marina/Documents/portifolio/HangmanGame/source/core/data_manager.cpp"
+},
+{
+  "directory": "/home/marina/Documents/portifolio/HangmanGame/source/build",
+  "command": "/usr/bin/c++    -Wall  -g3 -o CMakeFiles/hangman.dir/core/player.cpp.o -c /home/marina/Documents/portifolio/HangmanGame/source/core/player.cpp",
+  "file": "/home/marina/Documents/portifolio/HangmanGame/source/core/player.cpp"
+},
+{
+  "directory": "/home/marina/Documents/portifolio/HangmanGame/source/build",
+  "command": "/usr/bin/c++    -Wall  -g3 -o CMakeFiles/hangman.dir/core/scoreboard.cpp.o -c /home/marina/Documents/portifolio/HangmanGame/source/core/scoreboard.cpp",
+  "file": "/home/marina/Documents/portifolio/HangmanGame/source/core/scoreboard.cpp"
+}
+]
