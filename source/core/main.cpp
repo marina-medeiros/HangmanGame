@@ -34,7 +34,6 @@
 #include "hangman_gm.h"
 
 int main() {
-  int count = 0;
   std::setlocale(LC_ALL, "pt_BR.utf8");
   GameController hg;
 

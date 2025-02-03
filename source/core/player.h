@@ -26,6 +26,11 @@ private:
   int m_M_won = 0;
   int m_H_won = 0;
   int m_index;
+  // std::string stringGamesPlayed;
+  // std::string stringGamesWon;
+  // std::string stringGamesLost;
+  // std::string stringWinPercentage;
+  // std::string stringScore = std::to_string(m_score);
 
   //=== Public interface
 public:
@@ -49,6 +54,13 @@ public:
     return *this;
   }
 
+
+  std::string stringGamesPlayed;
+  std::string stringGamesWon;
+  std::string stringGamesLost;
+  std::string stringWinPercentage;
+  std::string stringScore = std::to_string(m_score);
+
   //Getters:
   /// Returns the player's name
   std::string name() const;
@@ -63,6 +75,13 @@ public:
   int get_index() const {return m_index;}
   std::set<std::string> get_played_words() const {return m_played_words;}
 
+  std::string get_stringGamesPlayed() {return stringGamesPlayed;}
+  std::string get_stringGamesWon() {return stringGamesWon;}
+  std::string get_stringGamesLost() {return stringGamesLost;}
+  std::string get_stringWinPercentage() {return stringWinPercentage;}
+  
+  std::string get_stringScore(){return std::to_string(m_score);}
+
   //Setters:
   ///  Sets player name.
   void name(const std::string &);
@@ -75,6 +94,12 @@ public:
   void set_name(std::string n){m_name = n;}
   void set_index(int p){m_index = p;}
   
+  void set_stringGamesPlayed(const std::string& value) { stringGamesPlayed = value; }
+  void set_stringGamesWon(const std::string& value) { stringGamesWon = value; }
+  void set_stringGamesLost(const std::string& value) { stringGamesLost = value; }
+  void set_stringWinPercentage(const std::string& value) { stringWinPercentage = value; }
+
+  
   void insert_played_word(std::string w){m_played_words.insert(w);}
   void add_word(const std::string &w);
   /// Add the score from one challenge.
@@ -84,11 +109,6 @@ public:
   /// Clear the word list.
   void clear_word_list();
 
-  std::string stringGamesPlayed;
-  std::string stringGamesWon;
-  std::string stringGamesLost;
-  std::string stringWinPercentage;
-  std::string stringScore = std::to_string(m_score);
 };
 
 #endif

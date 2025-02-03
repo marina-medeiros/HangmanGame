@@ -155,10 +155,10 @@ void combiningEMH(std::vector<Player>& allPlayers){
         GamesPlayed << person.get_E_played() << "/" << person.get_M_played() << "/" << person.get_H_played();
         GamesWon << person.get_E_won() << "/" << person.get_M_won() << "/" << person.get_H_won();
         GamesLost << person.get_E_played() - person.get_E_won() << "/" << person.get_M_played() - person.get_M_won() << "/" << person.get_H_played() - person.get_H_won();
-        person.stringGamesPlayed = GamesPlayed.str();
-        person.stringGamesWon = GamesWon.str();
-        person.stringGamesLost = GamesLost.str();
-        person.stringWinPercentage = setWinPercentage(person);
+        person.set_stringGamesPlayed(GamesPlayed.str());
+        person.set_stringGamesWon(GamesWon.str());
+        person.set_stringGamesLost(GamesLost.str());
+        person.set_stringWinPercentage(setWinPercentage(person));
     }
 }
 
