@@ -1,0 +1,3 @@
+/home/marina/Documents/portifolio/HangmanGame/source/build/CMakeFiles/hangman.dir
+/home/marina/Documents/portifolio/HangmanGame/source/build/CMakeFiles/edit_cache.dir
+/home/marina/Documents/portifolio/HangmanGame/source/build/CMakeFiles/rebuild_cache.dir
