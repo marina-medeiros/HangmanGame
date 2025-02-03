@@ -37,9 +37,9 @@ void GameController::process_events(){
     case game_state_e::WELCOME:
       m_curr_player.name(read_user_name());
       break;
-     case game_state_e::MAIN_MENU:
-       m_menu_option = read_menu_option();
-       break;
+    case game_state_e::MAIN_MENU:
+      m_menu_option = read_menu_option();
+      break;
     case game_state_e::CATEGORY_OPTIONS:
       m_data.set_chosen_categories(read_category_option());
       break;
@@ -61,13 +61,13 @@ void GameController::process_events(){
       m_asked_to_menu = read_user_enter();
       break;
      case game_state_e::QUITTING:
-       m_asked_to_quit = read_user_confirmation();
-       break;
+      m_asked_to_quit = read_user_confirmation();
+      break;
      case game_state_e::ENDING:
-       break;
+      break;
     default:
-        std::cerr << "Error: invalid Game State " << std::endl;
-        break;
+      std::cerr << "Error: invalid Game State " << std::endl;
+      break;
   }
 }
 
