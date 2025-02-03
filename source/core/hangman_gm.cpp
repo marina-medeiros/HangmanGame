@@ -65,6 +65,9 @@ void GameController::process_events(){
        break;
      case game_state_e::ENDING:
        break;
+    default:
+        std::cerr << "Error: invalid Game State " << std::endl;
+        break;
   }
 }
 
@@ -192,6 +195,9 @@ void GameController::update(){
     case game_state_e::ENDING:
       exit(0);
       break;
+    default:
+      std::cerr << "Error: Invalid Game State" << std::endl;
+      break;
   }
 }
 
@@ -239,6 +245,9 @@ void GameController::render() const{
       break;
     case game_state_e::ENDING:
       display_endgame();
+      break;
+    default:
+      std::cerr << "Error: Invalid Game State" << std::endl;
       break;
   }
 }
@@ -313,9 +322,8 @@ char GameController::read_user_guess() {
       std::cout << "Digits, punctuation, and spaces are not allowed. Please enter a letter >";
       return read_user_guess();
     }
-
-    return guess;
   }
+  return guess;
 }
 
 
@@ -421,7 +429,7 @@ GameController::game_state_e GameController::menu_chosen(menu_e menu_option) {
     case menu_e::UNDEFINED:
       return game_state_e::MAIN_MENU;
       break;
-    default: game_state_e::MAIN_MENU;
+    default: return game_state_e::MAIN_MENU;
   }
 }
 
@@ -437,7 +445,7 @@ GameController::game_state_e GameController::menu_chosen(menu_e menu_option) {
  *         - match_e::ON: The match is still ongoing.
  */
 GameController::match_e GameController::match_status() const {
-  if(m_curr_word.get_wrong_guesses().size() ==m_max_mistakes){
+  if(int(m_curr_word.get_wrong_guesses().size()) == m_max_mistakes){
       return match_e::PLAYER_LOST;
     }
     if(m_curr_word.get_masked_word()==m_curr_word.secret_word()){
@@ -580,6 +588,10 @@ void GameController::show_main_content_msg() const {
     case game_state_e::ENDING:
       std::cout<< "Thanks for playing! See you next time!";
       break;
+    
+    default:
+      std::cerr << "Error: Invalid Game State" << std::endl;
+      break;
     }
 }
 
@@ -613,49 +625,13 @@ void GameController::show_interaction_msg() const {
     case game_state_e::QUITTING:
       std::cout<< "Are you sure you wanna quit the game? (Your score is gonna be saved under your current username) (y/n) >";
       break;
+
+    default:
+      std::cerr << "Error: Invalid Game State" << std::endl;
+      break;
     }
 }
 
-/*
-  ____
-  |  |
-  |
-  |
-__|__
-_ _ _ 
-
-  ____
-  |  |
-  |  O
-__|__
-_ _ _ 
-
-  ____
-  |  |           easy
-  |  O
-  |_/|\_ 
-  |_/ \_
-__|__
-u _ _ 
-
-  ____
-  |  |
-  |  O          medium
-  |_/|\_ 
-  | / \
-__|__
-_ e _ _ e _ _ _ _ 
-
-  ____
-  |  |
-  |  O
-  | /|\ 
-  | / \
-__|__
-_ _ _ _ _ _ h _ 
-
-
-*/
 
 void GameController::display_gallows2(short wrongGuesses, char difficulty) const{
   short bodyHeight = 0;
@@ -730,6 +706,9 @@ void GameController::display_gallows(short wrongGuesses, char difficulty) const 
           if (wrongGuesses == 5){std::cout << "  | /" << std::endl;}
           if (wrongGuesses >= 6){std::cout << "  | / \\" << std::endl;}
         break;
+        default:
+            std::cerr << "Error: Invalid dificulty (" << difficulty << ")." << std::endl;
+            break;
       }
   } 
   for(short ii = 0; ii < (3 - bodyHeight); ii++){

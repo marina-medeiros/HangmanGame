@@ -47,7 +47,7 @@ private:
     ON = 1,      //!< Match still open and running.
     PLAYER_WON,  //!< Match ended and player WON.
     PLAYER_LOST, //!< Match ended and player LOST.
-    UNDEFINED,   //!< Undefined match status.
+    //UNDEFINED,   //!< Undefined match status.
   };
 
   //=== Data members
