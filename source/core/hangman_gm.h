@@ -74,6 +74,8 @@ private:
   std::string m_user_name; //!< Stores the user name provided in the Welcome state.
   std::vector<std::string> m_words_list; //!< List of words to play.
 
+  int language;
+
 public:
   //=== Public interface
   GameController() = default;
@@ -154,8 +156,6 @@ private:
   match_e match_status() const;
   /// Show the gallows with the hangman, whose body displayed depends on the # of mistakes made (argument).
   void display_gallows(short wrongGuesses, char difficulty) const;
-  void display_gallows2(short wrongGuesses, char difficulty) const;
-  void display_gallows_helper(short wrongGuesses) const;
   /// Changes the state of the game.
   void change_state(game_state_e new_state);
 };

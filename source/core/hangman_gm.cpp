@@ -632,40 +632,6 @@ void GameController::show_interaction_msg() const {
     }
 }
 
-
-void GameController::display_gallows2(short wrongGuesses, char difficulty) const{
-  short bodyHeight = 0;
-  if(wrongGuesses == 1){
-    bodyHeight = 1;
-  }else if(wrongGuesses > 4){
-    bodyHeight = 3;
-  }else{
-    bodyHeight = 2;
-  }
-  std::cout << "  ____" << std::endl;
-  std::cout << "  |  |" << std::endl;
-
-  display_gallows_helper(wrongGuesses);
-
-  for(short ii = 0; ii < (3 - bodyHeight); ii++){
-    std::cout << "  |" << std::endl;
-  }
-  std::cout << "__|__" << std::endl;
-}
-
-
-void GameController::display_gallows_helper(short wrongGuesses) const{
-  if(wrongGuesses >= 1){ std::cout << "  |  O" << std::endl;}
-
-  if (wrongGuesses == 2){std::cout << "  |  |" << std::endl;}
-  if (wrongGuesses == 3){std::cout << "  | /|" << std::endl;}
-  if (wrongGuesses == 4){std::cout << "  | /|\\ " << std::endl;}
-  
-  if (wrongGuesses == 5){std::cout << "  | /" << std::endl;}
-  if (wrongGuesses >= 6){std::cout << "  | / \\" << std::endl;}
-  
-}
-
 void GameController::display_gallows(short wrongGuesses, char difficulty) const {
   short bodyHeight = 0;
   if(wrongGuesses > 0){
