@@ -151,16 +151,34 @@ int collumn_length(std::vector<Player>& allPlayers, std::string Player :: *collu
  */
 void combiningEMH(std::vector<Player>& allPlayers){
     for (Player& person : allPlayers) {
-        std:: stringstream GamesPlayed, GamesWon, GamesLost, WinPercentage;
+        std:: stringstream GamesPlayed, GamesWon, GamesLost;
         GamesPlayed << person.get_E_played() << "/" << person.get_M_played() << "/" << person.get_H_played();
         GamesWon << person.get_E_won() << "/" << person.get_M_won() << "/" << person.get_H_won();
         GamesLost << person.get_E_played() - person.get_E_won() << "/" << person.get_M_played() - person.get_M_won() << "/" << person.get_H_played() - person.get_H_won();
-        WinPercentage << std::fixed << std::setprecision(1) << (float(person.get_E_won())/float(person.get_E_played()) *100) << "%/"<< std::fixed << std::setprecision(1) << (float(person.get_M_won())/float(person.get_M_played()) *100) << "%/" << std::fixed << std::setprecision(1) << (float(person.get_H_won())/float(person.get_H_played()) *100) << "%";
         person.stringGamesPlayed = GamesPlayed.str();
         person.stringGamesWon = GamesWon.str();
         person.stringGamesLost = GamesLost.str();
-        person.stringWinPercentage = WinPercentage.str();
+        person.stringWinPercentage = setWinPercentage(person);
     }
+}
+
+std::string setWinPercentage(Player& player){
+    std:: stringstream WinPercentage;
+    float easyPercentage = 0;
+    float mediumPercentage = 0;
+    float hardPercentage = 0;
+    if(player.get_E_played() > 0){
+        easyPercentage = float(player.get_E_won())/float(player.get_E_played()) *100;
+    }
+    if(player.get_M_played() > 0){
+        mediumPercentage = float(player.get_M_won())/float(player.get_M_played()) *100;
+    }
+    if(player.get_H_played() > 0){
+        hardPercentage = float(player.get_H_won())/float(player.get_H_played()) *100;
+    }
+    WinPercentage << std::fixed << std::setprecision(1) << easyPercentage << "%/"<< std::fixed << std::setprecision(1) << mediumPercentage << "%/" << std::fixed << std::setprecision(1) << hardPercentage << "%";
+
+    return WinPercentage.str();
 }
 
 /*!

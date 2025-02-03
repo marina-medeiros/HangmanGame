@@ -25,4 +25,6 @@ int collumn_length(std::vector<Player>& allPlayers, std::string Player :: *collu
 
 void combiningEMH(std::vector<Player>& allPlayers);
 
+std::string setWinPercentage(Player& player);
+
 void print_table ();

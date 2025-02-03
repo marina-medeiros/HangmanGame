@@ -702,7 +702,6 @@ void GameController::display_gallows(short wrongGuesses, char difficulty) const 
     }
   }
   
-  std::cout << bodyHeight << std::endl;
   std::cout << "  ____" << std::endl;
   std::cout << "  |  |" << std::endl;
   if (wrongGuesses >= 1) {
