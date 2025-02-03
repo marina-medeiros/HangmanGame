@@ -1,9 +1,4 @@
-/*!
- * Data Manager implementation.
- *
- * 
- */
-#include <string> // std::string
+#include <string>
 #include <iterator>
 #include <bits/stdc++.h>
 #include <map>

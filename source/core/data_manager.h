@@ -2,7 +2,7 @@
 #define _DATA_MANAGER_H_
 
 #include <set>
-#include <string> // std::string
+#include <string>
 #include <map>
 
 #include "player.h"
