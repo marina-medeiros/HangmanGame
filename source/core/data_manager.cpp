@@ -75,7 +75,7 @@ char DataManager::assign_dificulty(std::string word){
 }
 
 /*!
- * \brief Assigns categories to words based on a language file.
+ * \brief Assigns categories and dificulty levels to words based on a language file.
  *
  * This method reads a language file containing words and their categories,
  * then categorizes the words based on their difficulty level.
@@ -86,7 +86,7 @@ void DataManager::assign_categories(std::string language){
     std::ifstream wordsFile(language);
 
     if (!wordsFile.is_open()) {
-        std::cout << "Não abriu!!!" << std::endl;
+        std::cout << "Problem opening the file:" + language << std::endl;
         return;
     }
 

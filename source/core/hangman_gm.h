@@ -74,8 +74,6 @@ private:
   std::string m_user_name; //!< Stores the user name provided in the Welcome state.
   std::vector<std::string> m_words_list; //!< List of words to play.
 
-  int language;
-
 public:
   //=== Public interface
   GameController() = default;

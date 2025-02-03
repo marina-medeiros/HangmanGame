@@ -9,7 +9,7 @@
 
 class DataManager{
 private:
-    std::multimap<std::string, std::string> easyWords;
+    std::multimap<std::string, std::string> easyWords; //category, word
     std::multimap<std::string, std::string> mediumWords;
     std::multimap<std::string, std::string> hardWords;
     std::set<std::string> categories;
