@@ -65,8 +65,8 @@ static constexpr short BLINK{5};
 static constexpr short REVERSE{7};
 
 /// List of colors. You may which to change color ordering.
-static constexpr array color_list{31, 32, 33, 34, 35, 36, 37,
-                                  91, 92, 93, 94, 95, 96, 97};
+// static constexpr array color_list{31, 32, 33, 34, 35, 36, 37,
+//                                   91, 92, 93, 94, 95, 96, 97};
 
 /// Returns a string with a colored message.
 /*!
