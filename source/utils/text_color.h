@@ -75,8 +75,7 @@ static constexpr array color_list{31, 32, 33, 34, 35, 36, 37,
  * @param modifier Modifier code to apply to the message.
  * @return A string with the embedded color/modifier escape codes.
  */
-inline string tcolor(const string &msg, short color = Color::WHITE,
-                     short modifier = Color::REGULAR) {
+inline string tcolor(const string &msg, short color, short modifier /*= Color::REGULAR*/) {
   ostringstream oss;
   oss << "\33[" << modifier << ";" << color << "m" << msg << "\33[0m";
   return oss.str();

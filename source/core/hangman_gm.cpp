@@ -12,6 +12,7 @@
 
 #include "hangman_gm.h"
 #include "scoreboard.h"
+#include "../utils/text_color.h"
 
 /**
  * @brief Clears the console screen.
@@ -224,11 +225,11 @@ void GameController::render() const{
 
     case game_state_e::FINISH_GAME:
       if(match_status()==match_e::PLAYER_WON){
-        std::cout<<std::endl<<"CONGRATULATIONS! YOU WON!"<<std::endl;
+        std::cout<<std::endl<< Color::tcolor("CONGRATULATIONS! YOU WON!", 32, 1) <<std::endl;
         show_interaction_msg();
         break;
       }else{
-        std::cout<<std::endl<<"Sorry, you lost :( "<<std::endl;
+        std::cout<<std::endl<< Color::tcolor("YOU LOST! :( ", 31, 1) <<std::endl;
         std::cout<<"The word was : "<< m_curr_word.secret_word() <<std::endl;
         show_interaction_msg();
         break;
